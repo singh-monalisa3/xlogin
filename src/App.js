@@ -10,7 +10,21 @@ const Modal = ({ show }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // No custom validation needed since `required` attribute is being used.
+    // Phone number validation: should be exactly 10 digits
+    const phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phone)) {
+      alert('Invalid phone number. Please enter a 10-digit phone number.');
+      return; // Stop submission if invalid
+    }
+
+    // Date of birth validation: should not be in the future
+    const today = new Date();
+    const enteredDob = new Date(dob);
+    if (enteredDob > today) {
+      alert('Invalid date of birth. Date of birth cannot be in the future.');
+      return; // Stop submission if invalid
+    }
+
     alert("Form submitted successfully!");
   };
 
