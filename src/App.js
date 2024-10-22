@@ -60,8 +60,8 @@ const Modal = ({ show, onClose }) => {
   }
 
   return (
-    <div className="modal-backdrop" onClick={handleBackdropClick}>
-      <div className="modal">
+    <div className="model" onClick={handleBackdropClick}>
+      <div className="model-contend">
         <h2>Fill Details</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">

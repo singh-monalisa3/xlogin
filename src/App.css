@@ -8,7 +8,7 @@
 }
 
 /* Modal backdrop */
-.modal-backdrop {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +22,7 @@
 }
 
 /* Modal box */
-.modal {
+.model-contend {
   background-color: white;
   padding: 30px;
   border-radius: 10px;
