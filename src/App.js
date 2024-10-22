@@ -50,7 +50,7 @@ const Modal = ({ show, onClose }) => {
 
   // Close the modal when clicking outside of it
   const handleBackdropClick = (e) => {
-    if (e.target.className === 'modal-backdrop') {
+    if (e.target.className === 'modal') {
       onClose();
     }
   };
@@ -60,8 +60,8 @@ const Modal = ({ show, onClose }) => {
   }
 
   return (
-    <div className="model" onClick={handleBackdropClick}>
-      <div className="model-contend">
+    <div className="modal" onClick={handleBackdropClick}>
+      <div className="modal-content">
         <h2>Fill Details</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
